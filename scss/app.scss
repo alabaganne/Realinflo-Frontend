@@ -1,0 +1,100 @@
+// Custom.scss
+$theme_colors: (
+    "darker": #020202,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body { font-family: "Rubik", sans-serif }
+.min-vh-75 { min-height: 75vh }
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,.75) 0 100%), url('../images/header.jpg');
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-5, .display-6 { font-weight: 300 }
+.display-5 { font-size: 3em }
+.display-6 { font-weight: 2.25em }
+
+.text-wight-75 { color: rgba(255,255,255,.75) }
+
+img { max-width: 100% }
+
+.custom-border {
+    border-bottom: 4px solid var(--secondary);
+    transition: .5s;
+}
+.custom-border:hover {
+    border-color: var(--danger);
+}
+
+.cursor-pointer { cursor: pointer }
+
+#team {
+    background-image: linear-gradient(rgba(0,0,0,.75) 0 100%), url('../images/header.jpg');
+    img { width: 200px }
+}
+
+.bg-scroll { background-attachment: fixed }
+.bg-center { background-position: center }
+
+.custom-carousel-indicators div {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    margin: 5px;
+}
+.social-media a {
+    color: rgba(255,255,255,.75) !important;
+    margin: 0 10px;
+    transition: .25s;
+}
+#team .social-media a:hover { color: var(--warning) !important }
+
+#contact {
+    input, select, textarea {
+        display: block;
+        width: 100%;
+    }
+    .col-6, .col-12 {
+        margin-bottom: 1.5em;
+    }
+}
+
+::placeholder {
+    transition: .4s;
+    font-weight: 300;
+    color: var(--dark);
+}
+input, select, textarea {
+    border: none;
+    font-size: 14pt;
+    padding: 10px 15px;
+    border-radius: .1em;
+    outline: none;
+}
+textarea { resize: none }
+:focus::placeholder { color: transparent }
+
+footer {
+    a {
+        text-decoration: none !important;
+        color: rgba(255,255,255,.75) !important;
+        &:hover, &.active {
+            color: white !important;
+        }
+    }
+    .social-media a {
+        &:hover {
+            transform: translateX(5px);
+        }
+        &.active {
+            transform: translate(0) !important;
+        }
+    }
+}
